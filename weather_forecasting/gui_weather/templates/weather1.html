@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/static/main.css" rel="stylesheet" >
+</head>
+
+<body>
+    <div>
+        <form action="/weather2" method="post" class="form1" >
+            {%for v in xvalues%}
+                <p>Please select X(Input) or Y(Target) value for {{v}}</p>
+                  <input type="radio" id="x+{{v}}" name="{{v}}" value="x+{{v}}">
+                <label for="{{v}}">x+{{v}}</label><br>
+
+                <input type="radio" id="y+{{v}}" name="{{v}}" value="y+{{v}}">
+                <label for="css">y+{{v}}</label><br>
+                <br>
+            {%endfor%}
+
+            <button type="submit" class="chat-input">Analyse the models</button>
+        </form>
+    </div>
+</body>
+
+</html>
